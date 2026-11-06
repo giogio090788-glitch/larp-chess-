@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LARP Chess — Learn Openings. Become Legend.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ HOME SCREEN ============ -->
+  <main id="home-screen">
+    <header class="hero">
+      <h1>LARP CHESS</h1>
+      <p class="tagline">
+        Learn the opening. Say the line. <strong>Become the character.</strong>
+      </p>
+      <p class="subtitle">
+        Pick a persona. It teaches you one famous opening, move by move.
+      </p>
+    </header>
+    <section id="lesson-grid" class="lesson-grid" aria-label="Opening lessons"></section>
+    <footer class="home-footer">
+      <p>Progress saves on this device. Dice not included.</p>
+    </footer>
+  </main>
+
+  <!-- ============ LESSON SCREEN ============ -->
+  <main id="lesson-screen" class="hidden">
+    <header class="lesson-header">
+      <button id="back-btn" class="btn ghost" type="button">‹ All openings</button>
+      <div class="lesson-title-block">
+        <h2 id="lesson-name"></h2>
+        <p id="lesson-persona" class="persona-chip"></p>
+      </div>
+      <div class="mode-toggle" role="group" aria-label="Mode">
+        <button id="mode-learn" class="btn mode active" type="button">Learn</button>
+        <button id="mode-practice" class="btn mode" type="button">Practice</button>
+      </div>
+    </header>
+
+    <div class="lesson-body">
+      <div class="board-column">
+        <div id="board" class="board" aria-label="Chess board"></div>
+        <div class="board-controls">
+          <button id="prev-btn" class="btn" type="button">‹ Prev</button>
+          <button id="next-btn" class="btn primary" type="button">Next ›</button>
+          <button id="flip-btn" class="btn ghost" type="button">Flip board</button>
+          <button id="restart-btn" class="btn ghost" type="button">Restart</button>
+        </div>
+        <div id="practice-status" class="practice-status hidden"></div>
+      </div>
+
+      <aside class="side-panel">
+        <div id="narration" class="narration">
+          <img id="narration-avatar" class="narration-avatar" alt="Persona avatar" />
+          <div>
+            <div id="narration-speaker" class="narration-speaker">Dungeon Master</div>
+            <p id="narration-text"></p>
+            <p id="narration-say" class="narration-say hidden"></p>
+          </div>
+        </div>
+        <div class="move-list-wrap">
+          <h3>Moves</h3>
+          <ol id="move-list" class="move-list"></ol>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Progress</span><span id="progress-text">0 / 0</span></div>
+          <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+        </div>
+      </aside>
+    </div>
+
+    <div id="victory-overlay" class="victory-overlay hidden">
+      <div class="victory-card">
+        <img class="victory-avatar" id="victory-avatar" alt="Opening persona" />
+        <h2 id="victory-title">Opening Mastered!</h2>
+        <p id="victory-text"></p>
+        <div class="victory-actions">
+          <button id="victory-replay" class="btn" type="button">Run it back</button>
+          <button id="victory-home" class="btn primary" type="button">Pick another persona</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="chess.js"></script>
+  <script src="openings.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
