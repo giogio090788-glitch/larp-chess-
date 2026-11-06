@@ -1,2 +1,3 @@
 # larp-chess-
 Learn chess openings by becoming them. Role-play as the Witty Alien, the Enlightened One, or a London System NPC while a sassy narrator teaches you the move
+LARP Chess — a zero-dependency web app that teaches famous chess openings through role-play. Each opening is a character: the Witty Alien plays the Alien Gambit, the Berserker serves the Fried Liver, the Enlightened One plays the Bongcloud. Step through the lines in Learn mode with move-by-move narration and quotable one-liners, then prove it in Practice mode — wrong moves get you roasted. Hand-drawn wojak avatars, chess.com-style board, progress saved locally. No build step, no install: open index.html and ascend.
